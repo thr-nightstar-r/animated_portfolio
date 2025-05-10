@@ -1,9 +1,9 @@
-/* center card and basic styling for body */
+/* center card  */
 body {
   margin: 0;
   font-family: tahoma;
   height: 100vh;
-  background: #f5f5f5;
+  background:rgba(150, 145, 145, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,29 +13,34 @@ body {
 .card {
   padding: 30px 0 55px;
   margin-bottom: 30px;
-  background-color: #f5f5f5;
+  background-color:#B4a8a7;
   text-align: center;
   overflow: hidden;
   position: relative;
-  box-shadow: 20px 20px 42px #d0d0d0, -20px -20px 42px #ffffff;
+  box-shadow: 20px 20px 42px #B4aa44, -20px -20px 42px #B468a4;
   width: 20rem;
+  radius: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+  border: 2px solid #1f1b1b;
+  box-sizing: border-box;
 }
 
-/* porfile image section  */
+/* profile image section  */
 /* css for profile image and  fluid effect  */
 
-/* 1.2 styling for fluid and circle effect on profile */
-.card .profile {
+/* 1.2 */
+.card .picture {
   display: inline-block;
   height: 130px;
   width: 130px;
   z-index: 1;
   position: relative;
-  border-radius: 20%;
+  border-radius: 110%;
 }
 
-/* profile fluid effect  */
-.card .profile::before {
+.card .picture::before {
   content: "";
   width: 100%;
   height: 0;
@@ -50,13 +55,12 @@ body {
   transition: all 0.3s linear 0s;
 }
 
-/* show fluid effect on card hover  */
-.card:hover .profile::before {
-  height: 100%;
+.card:hover .picture::before {
+  height: 50%;
+  border-radius: 0%;
 }
 
-/* circle border effect on profile  */
-.card .profile::after {
+.card .picture::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -68,29 +72,27 @@ body {
   z-index: -1;
 }
 
-/* 1.1 styling form card profile imag */
-.card .profile img {
+/* 1.1 */
+.card .picture img {
   width: 100%;
-  height: auto;
-  border-radius: 50%;
+  height: 100%;
+  border-radius: 100%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
 }
-
-/* transform img on card hover  */
-.card:hover .profile img {
-  box-shadow: 0 0 0 14px #f7f5ec;
-  transform: scale(0.7);
+.card:hover .picture img {
+  box-shadow: 0 0 0 12px #f7f5ec;
+  transform: scale(1);
 }
 
-/* porfile image section  */
-/* marin content section  */
+/* profile image section  */
+/* main content section  */
 /* 2.1 */
 .card .main-content {
-  margin-bottom: -19px;
+  margin-bottom: -10px;
 }
 
-/* 2.2 styling title */
+/* 2.2 */
 .card .main-content .title {
   display: block;
   font-size: 15px;
@@ -99,16 +101,16 @@ body {
   margin: 5px 37px 0;
 }
 
-/* 2.3 styling name */
+/* 2.3 */
 .card .main-content .name {
   padding: 0;
   margin: 8px;
   text-transform: uppercase;
 }
 
-/* marin content section  */
+/* main content section  */
 /* social media section  */
-/* 3.1 css for social */
+/* 3.1 */
 .card .social {
   width: 100%;
   padding: 0;
@@ -126,12 +128,12 @@ body {
   bottom: 0;
 }
 
-/* 3.2 make all social icons in a row */
+/* 3.2 */
 .card .social li {
   display: inline-block;
 }
 
-/* 3.3 css for social media anchors */
+/* 3.3 */
 .card .social li a {
   display: block;
   padding: 10px;
@@ -141,7 +143,7 @@ body {
   text-decoration: none;
 }
 
-/* 3.4 change color , bgcolor on hover */
+/* 3.4 */
 .card .social li a:hover {
   color: #3e3b44;
   background-color: #f7f5ec;
@@ -149,34 +151,33 @@ body {
 }
 
 /* skill section  */
-/* 4.1 left all text , padding */
+/* 4.1 */
 .skills {
   text-align: left;
   padding: 15px;
 }
 
-/* 4.2 remove default list-style-type */
+/* 4.2 */
 .skills ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* 4.3 css for skills all li */
+/* 4.3 */
 .skills ul li {
-  border: 1px solid #1f1b1b;
-  border-radius: 2px;
+  border: 2px solid #1f1b1b;
+  border-radius: 3px;
   display: inline-block;
   font-size: 12px;
-  margin: 0 7px 7px 0;
-  padding: 7px;
+  margin: 0.1px 8px 8px 0;
+  padding: 7px 10px;
 }
-
-/* 4.4 change color and bgcolor on hover */
+  
+/* 4.4 */
 .skills ul li:hover {
   background-color: #1f1b1b;
   color: #fff;
   cursor: pointer;
   transition: 0.5s;
 }
-
