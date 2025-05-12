@@ -78,6 +78,7 @@ body {
   height: 100%;
   border-radius: 100%;
   transform: scale(1);
+  object-fit: cover;
   transition: all 0.9s ease 0s;
 }
 .card:hover .picture img {
